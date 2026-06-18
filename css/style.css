@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to left, #87EFF6, #fff);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+
+    & .navbar ul {
+        display: flex;
+        gap: 50px;
+
+        & li a {
+            color: #000;
+        }
+    }
+    & .menu {
+        display: none;
+    }
+}
+
+
+main {
+    padding: 40px 80px;
+    & .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        height: calc(100vh - 185px);
+        gap: 30px;
+        & .lado-esquerdo {
+            max-width: 604px;
+            min-width: 330px;
+            display: flex;
+            flex-direction: column;
+            gap: 58px;
+
+            & .content {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                
+                & p:first-child {
+                    color: red;
+                    font-size: 24px;
+                    font-weight: 600;
+                    
+                }
+                & p:last-child {
+                    font-size: 18px;
+                }
+                & h1 {
+                    font-size: 40px;
+                }
+            }
+
+            & .btns {
+                display: flex;
+                gap: 16px;
+
+                & button {
+                    border-radius: 16px;
+                    background-color: #4abbc2;
+                    padding: 14px 20px;
+                    border: none;
+                    font-weight: 700;
+                }
+                & button:last-child {
+                    background: transparent;
+                    border: 2px solid #4abbc2;
+                    color: #4abbc2;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    main .home {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .menu {
+        display: flex;
+    }
+   
+}
+
+@media screen and (max-width: 680px)  {
+    header, main{
+        padding: 40px 10px;
+    }
+}
+@media screen and (max-width: 500px) {
+    main .home {
+        & .lado-esquerdo .content h1 {
+            font-size: 36px;
+        }
+
+        & .lado-direito img {
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    main .home .lado-esquerdo .btns {
+        flex-direction: column;
+    }
+}
+
